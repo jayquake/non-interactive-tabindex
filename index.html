@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessibility Testing</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .list-item {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+      }
+      .table th,
+      .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive elements with role and tabindex</h1>
+      <ul>
+        <li class="list-item">
+          <a href="#" role="button" tabindex="0">A as Button</a>
+        </li>
+        <li class="list-item">
+          <a href="#" role="link" tabindex="0">A as Link</a>
+        </li>
+        <li class="list-item">
+          <span role="button" tabindex="0">Span as Button</span>
+        </li>
+        <li class="list-item">
+          <div role="link" tabindex="0">Div as Link</div>
+        </li>
+        <li class="list-item">
+          <img
+            src="example.jpg"
+            alt="example image"
+            role="button"
+            tabindex="0"
+          />
+        </li>
+        <li class="list-item">
+          <svg
+            role="link"
+            tabindex="0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bootstrap"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.062 1h5.876c2.7 0 4.436 2.03 4.438 4.475v4.55C15.378 13.97 13.641 16 10.94 16H5.062C2.366 16 .625 13.975.623 10.525v-4.55C.625 3.03 2.365 1 5.062 1z"
+            />
+            <path
+              d="M8 4.768c-1.58 0-2.633.875-2.633 2.012 0 .73.568 1.13 1.06 1.382.56.286 1.278.421 1.852.578v.154c0 .359-.15.577-.723.577-.602 0-.914-.224-1.106-.45l-1.235.666c.359.66 1.117 1.118 2.457 1.118 1.696 0 2.633-.843 2.635-2.056v-.652c-.106-.01-.222-.02-.345-.03-.758-.08-1.464-.15-1.464-.674 0-.33.27-.539.695-.539.602 0 .91.176 1.127.33l1.198-.77c-.408-.482-.984-.724-1.854-.724z"
+            />
+          </svg>
+          <li class="list-item">
+            <label for="option1" tabindex="0">Option 1 Radio</label>
+            <input type="radio" id="option1" name="options" role="radio" tabindex="0" />
+        </li>
+        <li class="list-item">
+            <label for="option2" tabindex="0">Option 2 Radio</label>
+            <input type="radio" id="option2" name="options" role="radio" tabindex="0" />
+        </li>
+        <li class="list-item">
+            <label for="volume" tabindex="0">Volume Range</label>
+            <input type="range" id="volume" role="slider" min="0" max="100" tabindex="0" />
+        </li>
+        <li class="list-item">
+            <input type="checkbox" id="terms" role="checkbox" tabindex="0" />
+            <label for="terms" tabindex="0">Terms and Conditions Checkbox</label>
+        </li>
+    </ul>
+      </ul>
+      <h1>Non-interactive elements with tabindex="0"</h1>
+      <ul>
+        <li class="list-item"><p tabindex="0">Paragraph</p></li>
+        <li class="list-item"><h2 tabindex="0">Heading 2</h2></li>
+        <li class="list-item"><h3 tabindex="0">Heading 3</h3></li>
+        <li class="list-item">
+          <section tabindex="0">
+            <h4>A Section</h4>
+            <p>This is a section with a heading and a paragraph inside.</p>
+          </section>
+        </li>
+        <li class="list-item">
+          <article tabindex="0">
+            <h5>An Article</h5>
+            <p>This is an article with a heading and a paragraph inside.</p>
+          </article>
+        </li>
+        <li class="list-item"><aside tabindex="0">An Aside</aside></li>
+        <li class="list-item"><figure tabindex="0">A Figure</figure></li>
+        <li class="list-item"><footer tabindex="0">A Footer</footer></li>
+        <li class="list-item"><header tabindex="0">A Header</header></li>
+        <li class="list-item"><main tabindex="0">Main Content</main></li>
+        <li class="list-item"><nav tabindex="0">Navigation</nav></li>
+        <li class="list-item">
+          <table class="table" tabindex="0">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>john.doe@example.com</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <!-- Interactive elements -->
+      <h1>Additional interactive elements with role and tabindex</h1>
+      <ul>
+        <li class="list-item">
+          <input
+            type="text"
+            role="textbox"
+            tabindex="0"
+            placeholder="Input text"
+          />
+        </li>
+        <li class="list-item">
+          <input type="button" role="button" tabindex="0" value="Button" />
+        </li>
+        <li class="list-item">
+          <input type="checkbox" role="checkbox" tabindex="0" />
+        </li>
+        <li class="list-item">
+          <button role="button" tabindex="0">Button Element</button>
+        </li>
+        <li class="list-item">
+          <select role="listbox" tabindex="0">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </li>
+        <li class="list-item">
+          <label for="inputField" tabindex="0">Label:</label>
+          <input type="text" id="inputField" tabindex="0" />
+        </li>
+        <li class="list-item">
+          <textarea role="textbox" tabindex="0"></textarea>
+        </li>
+      </ul>
+
+      <!-- Non-interactive elements -->
+      <h1>Additional non-interactive elements with tabindex="0"</h1>
+      <ul>
+        <li class="list-item">
+          <blockquote tabindex="0">
+            A long quotation from a notable source
+          </blockquote>
+        </li>
+        <li class="list-item"><code tabindex="0">let x = 10;</code></li>
+        <li class="list-item">
+          <pre tabindex="0">const y = 20;\nlet z = x + y;</pre>
+        </li>
+        <li class="list-item">
+          <time datetime="2023-07-09" tabindex="0">July 9, 2023</time>
+        </li>
+        <li class="list-item"><mark tabindex="0">Highlighted text</mark></li>
+        <li class="list-item">
+          <progress value="70" max="100" tabindex="0"></progress>
+          <span> 70% completed</span>
+        </li>
+        <li class="list-item">
+          <meter value="2" min="0" max="10" tabindex="0"></meter>
+          <span> 2 out of 10</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
